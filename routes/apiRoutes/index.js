@@ -1,12 +1,12 @@
 //dependencies
-const express = require(express).Router();
+const router = require('express').Router();
 
 //functions from lib/notes.js
 const {getNotes, createNewNote, validateNote, deleteNote} = require('../../lib/notes');
 
 //returns all saved notes with router.get and res.json
 router.get('/notes', (req, res) => {
-    res.json(getNotes);
+    res.json(getNotes());
 });
 
 // posts a new note to saved notes
